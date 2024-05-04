@@ -1,0 +1,13 @@
+.home-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(50vh - 150px);
+  color:#fff;
+}
+.home-text h1{
+  font-size:3rem;
+}
+.home-text p{
+  font-size: 20px;
+}

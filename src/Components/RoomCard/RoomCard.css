@@ -1,0 +1,43 @@
+.room-card{
+  width: 300px;
+  padding:10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e4f0d6;
+}
+.zoom{
+  overflow: hidden;
+}
+ img{
+  height: 150px;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.room-card img:hover{
+  transform:  scale(1.1);;
+}
+.room-card:last-child{
+  justify-self: start;
+}
+.top-title p {
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+.card-bottom{
+   position: relative;
+}
+.card-bottom p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.botom-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:6px;
+  margin-bottom: 10px;
+}

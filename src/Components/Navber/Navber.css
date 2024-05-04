@@ -1,0 +1,29 @@
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color:#fff;
+}
+.logo h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+.btn  {
+  background: #ffcd2b;
+  padding:8px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.btn:hover{
+  background: #ffce2b7e;
+}
+.link{
+  text-decoration: none;
+  color:#111;
+}

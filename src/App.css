@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+body{
+  color:#112211;
+}
+img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.padding{
+  padding: 0% 10%;
+ overflow: hidden;
+}
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding:0px 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* ----home page start ---  */
+.top{
+  width: 100vw;
+  height: 50vh;
+  background: url("https://images.unsplash.com/photo-1439130490301-25e322d88054?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),#00000061;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position:  center center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:50px;
+  flex-wrap: wrap;
+  position: absolute;
+  top:40%;
 }
 
-.App-link {
-  color: #61dafb;
+/* ----home page end ---  */
+
+
+.sign-in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+.sign-in button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  background: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.sign-in button:hover{
+  color:#1a1a1a;
+}
+.google{
+  font-size: 22px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.login-nav h3{
+  color: #000;
+}
+
+
+
+
+/* ----home page start ---  */
+/* ----home page end ---  */
+
+@media screen and (max-width:700px) {
+  .padding{
+    padding:0% 3%
   }
 }

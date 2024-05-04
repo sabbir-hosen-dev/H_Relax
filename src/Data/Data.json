@@ -1,0 +1,29 @@
+[
+  {
+    "id" : "1",
+    "type": "Standard Single Room",
+    "description": "Standard Single Rooms are designed in open-concept living area and have many facilities.",
+    "price": 100,
+    "bad": 1,
+    "person": 1,
+    "image" : "https://images.unsplash.com/photo-1564273795917-fe399b763988?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2luZ2xlJTIwYmVkfGVufDB8fDB8fHww"
+  },
+  {
+    "id" : "2",
+    "type": "Couple Power Room",
+    "description": "Couple Power Rooms provide extra comfort and amenities for couples.",
+    "price": 220,
+    "bad": 2,
+    "person": 2,
+    "image" : "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJhYmJsZSUyMGJlZHxlbnwwfHwwfHx8MA%3D%3D"
+   },
+  {
+    "id" : "3",
+    "type": "Family Capacity Room",
+    "description": "Family Capacity Rooms offer spacious accommodations suitable for families.",
+    "price": 450,
+    "bad": 3,
+    "person": 4,
+    "image" : "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlwJTIwYmVkfGVufDB8fDB8fHww"
+  }
+]
