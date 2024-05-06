@@ -10,39 +10,61 @@ body{
 }
 img{
   width: 100%;
-  height: auto;
   object-fit: cover;
   display: block;
 }
 .padding{
   padding: 0% 10%;
- overflow: hidden;
 }
 .container{
   max-width: 1120px;
   margin: 0 auto;
+  overflow: hidden;
   padding:0px 40px;
 }
 
 
 /* ----home page start ---  */
-.top{
+.home-wrap .top{
   width: 100vw;
   height: 50vh;
   background: url("https://images.unsplash.com/photo-1439130490301-25e322d88054?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),#00000061;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position:  center center;
+  background-size: cover !important;
+  background-blend-mode: multiply !important;
+  background-repeat: no-repeat !important;
+  background-position:  center center !important;
+  position: relative;
+  width: 100%;
 }
 
-.bottom{
+.bottom-card{
   display: flex;
   justify-content: center;
   gap:50px;
   flex-wrap: wrap;
   position: absolute;
   top:40%;
+}
+.bottom-date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+.date{
+  background-color:#F8F9F9;
+  padding:30px 80px;
+  border-radius: 30px;
+  
+}
+.date-piker-wrap{
+  display: flex;
+  justify-content: center;
 }
 
 /* ----home page end ---  */
@@ -80,7 +102,13 @@ img{
 }
 
 
-
+.book-btn{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+ gap:10px;
+}
 
 /* ----home page start ---  */
 /* ----home page end ---  */
@@ -88,5 +116,11 @@ img{
 @media screen and (max-width:700px) {
   .padding{
     padding:0% 3%
+  }
+  .book-btn{
+    flex-direction: column;
+  }
+  .date{
+    padding: 30px 40px;
   }
 }

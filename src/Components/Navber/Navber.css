@@ -8,6 +8,10 @@ nav{
 .logo h3 {
   font-size: 30px;
   font-weight: 800;
+  color:#111;
+}
+.top .logo h3{
+  color:#fff;
 }
 .btn  {
   background: #ffcd2b;
@@ -26,4 +30,18 @@ nav{
 .link{
   text-decoration: none;
   color:#111;
+  display: block;
+}
+.user-logo{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #1011;
+  background-color: orangered;
+  overflow: hidden;
+}
+.user-logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }

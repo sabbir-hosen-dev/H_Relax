@@ -5,6 +5,12 @@ export const initialState = {
     email: " ",
     photo: "",
   },
+  selectItem : {
+    img:"",
+    title: "",
+    dec: " ",
+    price:""
+  }
 };
 
 export const reducer = (state, action) => {
@@ -18,8 +24,15 @@ export const reducer = (state, action) => {
       };
 
     case "ADD_USER":
+      const {name,email,photo} = action.payload
       return {
         ...state,
+        user: {
+          ...state.user,
+          name: name,
+          email: email,
+          photo: photo
+        }
       };
 
     default:

@@ -1,5 +1,6 @@
 import React from "react";
 import "./RoomCard.css";
+import { Link} from "react-router-dom";
 
 function RoomCard({ data }) {
   const { image, type, description, person, price, bad } = data;
@@ -21,7 +22,7 @@ function RoomCard({ data }) {
           <span className="btn-wrap">Price : ${price}</span>
         </div>
         <div style={{ display: "block" }}>
-          <div className="btn">BookNow</div>
+          <Link state={{img: image,text : type}} to="/date-select" className="btn link">BookNow</Link>
         </div>
       </div>
     </div>

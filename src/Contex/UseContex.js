@@ -9,8 +9,8 @@ const RelexProvider = ({children}) => {
   const [state,dispatch] = useReducer(reducer,initialState);
 
   const value = {
-    name : state.name,
-    roll: state.roll,
+      user: state.user,
+      login:state.login,
     addUser : (data) => {
       dispatch({type:"ADD_USER",payload:data})
     },

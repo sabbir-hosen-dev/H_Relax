@@ -12,8 +12,8 @@ function Home() {
         <HomeText />
       </div>
       <div className="container">
-        <div className="bottom">
-          {Data.map((data) => (
+        <div className="bottom-card">
+            {Data.map((data) => (
             <RoomCard key={data.id} data={data} />
           ))}
         </div>
