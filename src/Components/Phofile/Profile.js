@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navber from "../Navber/Navber";
 import "./Profile.css";
 import useReluxContex from "../../Hooks/useReluxContex";
-import { useLocation } from "react-router-dom";
-import { format } from 'date-fns';
 
 function Profile() {
-  const { user } = useReluxContex();
-  const location = useLocation();
+  const [userData, setUserData] = useState([]);
 
-  const { data, date } = location.state;
-  const formattedCheckInDate = format(date.checkInDate, "dd-MM-yyyy");
-  const formattedCheckOutDate = format(date.checkOutDate, "dd-MM-yyyy");
+  const { user } = useReluxContex();
+
+  useEffect(() => {
+    fetch(`http://localhost:5050/bookdin?email=${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUserData(data);
+      });
+  }, [user.email]);
+
   return (
     <div className="container">
       <Navber />
@@ -26,18 +30,22 @@ function Profile() {
           </div>
         </div>
         <div className="p-wrap right">
-          <div className="detels">
-            <div className="d-img">
-              <img src={data.img} alt="" />
-            </div>
-            <div className="d-i">
-              <h3>{data.text}</h3>
-              <div className="shw-date">
-                <p>{formattedCheckInDate}</p>
-                <p>{formattedCheckOutDate}</p>
+          {userData.map((data) => {
+            const { checkInDate, checkOutDate, image, type, _id } = data;
+            return (
+              <div className="detels" key={_id}>
+                <div className="d-img">
+                  <img src={image} alt="" />{" "}
+                </div>
+                <div className="d-i">
+                  <h3>{type}</h3>
+
+                  <p>Check In : {checkInDate}</p>
+                  <p> Check Out{checkOutDate}</p>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
