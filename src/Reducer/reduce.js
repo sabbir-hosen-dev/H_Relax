@@ -5,19 +5,22 @@ export const initialState = {
     email: " ",
     photo: "",
   },
-  selectItem : {
-    img:"",
-    title: "",
-    dec: " ",
-    price:""
-  }
+  selectItem : ""
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    
 
+
+    case "SELECT":
+      console.log("check click")
+      console.log(action.payload)
+      return {
+        ...state,
+        selectItem: action.payload
+      };
     case "SET_LOGIN":
-      
       return {
         ...state,
         login: action.payload,

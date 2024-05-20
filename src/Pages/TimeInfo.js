@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 function TimeInfo() {
   const location = useLocation();
   const { img, text } = location.state;
-    console.log(location);
   return (
     <section className="home-wrap">
       <div className="top" style={{ background: `url(${img}) #00000061` }}>

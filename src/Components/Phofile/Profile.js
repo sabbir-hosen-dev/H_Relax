@@ -9,11 +9,19 @@ function Profile() {
   const { user } = useReluxContex();
 
   useEffect(() => {
-    fetch(`http://localhost:5050/bookdin?email=${user.email}`)
+    fetch(`http://localhost:5050/bookdin?email=${user.email}`, {
+      method: "GET",
+      headers: {
+        "Content-Type" : "application/json",
+        authorization : `Bearer ${localStorage.getItem("token")}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);
-      });
+      })
+      .catch(err => console.log(err))
+
   }, [user.email]);
 
   return (
@@ -22,7 +30,7 @@ function Profile() {
       <div className="profile-wrap">
         <div className="p-wrap left">
           <div className="user-img">
-            <img src={user.image} alt="" />
+            <img src={user.photo} alt="" />
           </div>
           <div className="u-d">
             <h3>{user.name}</h3>

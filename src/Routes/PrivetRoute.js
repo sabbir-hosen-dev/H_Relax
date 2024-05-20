@@ -4,7 +4,7 @@ import useReluxContex from './../Hooks/useReluxContex';
 
 function PrivetRoute({children}) {
   const {login} = useReluxContex();
-
+  
 
   if(!login){
     return <Navigate to="/login" replace />

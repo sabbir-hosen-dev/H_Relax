@@ -21,7 +21,14 @@ function AppRoutes() {
             </PrivetRoute>
           }
         />
-        <Route path="/profile" element={<Profile/>} />
+        <Route
+          path="/profile"
+          element={
+            <PrivetRoute>
+              <Profile />
+            </PrivetRoute>
+          }
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
